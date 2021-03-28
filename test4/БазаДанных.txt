@@ -1,0 +1,76 @@
+Users:
+{
+    _id: ObjectId(User),
+    name: ,
+    gender: ,
+    link: ,
+    outer_links: [],
+    contacts: [],
+    pictures: [],
+    locations: [{relation_type: , location: ObjectId(Location)}, ],
+    jobs: [{state: , date: , ObjectId(Job)}, ],
+    universities: [{state: , date: , ObjectId(Universitie)}, ],
+    schools: [{state: , date: , ObjectId(School)}, ],
+    events: [{date: , name: }]
+    posts: [ObjectId(Post), ],
+    friends: [ObjectId(User), ],
+    relatives: [{relation_type: , id: ObjectId(User)}, ],
+    has_extras: true
+}
+
+Posts:
+{
+    _id: ObjectId(Post),
+    link: ,
+    date: ,
+    text: ,
+    media: ,
+    outer_links: [],
+    users_liked: [{reaction_type: , id: ObjectId(User)}, ],
+    users_shared: [ObjectId(User), ],
+    comments: [{text: , date: , id: ObjectId(User)}, ]
+    has_extras: true
+}
+
+Locations:
+{
+    _id: ObjectId(Location),
+    name: ,
+    link: ,
+    users: [ObjectId(User), ]
+    events: [{date: , name: , link: }, ]
+    has_extras: true
+}
+
+Jobs:
+{
+    _id: ObjectId(Job)
+    link: ,
+    name: ,
+    followers: ,
+    about: ,
+    photos: [ , ]
+    workers: [ObjectId(User), ]
+}
+
+Universities:
+{
+    _id: ObjectId(Universitie)
+    link: ,
+    name: ,
+    followers: ,
+    about: ,
+    photos: [ , ]
+    students: [ObjectId(User), ]
+}
+
+Schools:
+{
+    _id: ObjectId(School)
+    link: ,
+    name: ,
+    followers: ,
+    about: ,
+    photos: [ , ]
+    students: [ObjectId(User), ]
+}
